@@ -12,7 +12,6 @@ Group:		Development/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Digest/%{real_name}-%{version}.tar.bz2
 URL:		http://search.cpan.org/dist/%{real_name}/
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 Digest-SHA1 module for perl.
