@@ -1,7 +1,7 @@
 %define	real_name	Digest-SHA1
 %define	name		perl-%real_name
 %define	version	2.11
-%define	release	%mkrel 3
+%define	release	%mkrel 4
 
 Summary:	Perl interface to the SHA1 Algorithm
 Name:		%{name}
