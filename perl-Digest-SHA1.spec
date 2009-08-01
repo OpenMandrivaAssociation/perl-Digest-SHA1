@@ -1,24 +1,24 @@
-%define	real_name	Digest-SHA1
-%define	name		perl-%real_name
-%define	version	2.12
-%define	release	%mkrel 1
+%define	upstream_name	 Digest-SHA1
+%define	upstream_version 2.12
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Perl interface to the SHA1 Algorithm
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Digest/%{real_name}-%{version}.tar.bz2
-URL:		http://search.cpan.org/dist/%{real_name}/
+URL:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Digest/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Digest-SHA1 module for perl.
 
 %prep
-%setup -q -n %{real_name}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -40,4 +40,3 @@ rm -rf %{buildroot}
 %{_mandir}/*/*
 %{perl_vendorarch}/Digest
 %{perl_vendorarch}/auto
-
