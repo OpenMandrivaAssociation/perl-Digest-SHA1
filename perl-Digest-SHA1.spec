@@ -13,6 +13,8 @@ Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Digest/%{upstream_name}-%
 
 BuildRequires:	perl-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+# temporary dep due to the perl-5.14 bump
+BuildRequires:  perl-List-MoreUtils >= 0.320.0-4
 
 %description
 Digest-SHA1 module for perl.
