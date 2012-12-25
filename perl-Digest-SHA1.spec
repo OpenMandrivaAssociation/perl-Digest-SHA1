@@ -1,9 +1,9 @@
 %define	upstream_name	 Digest-SHA1
 %define upstream_version 2.13
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    8
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	9
 
 Summary:	Perl interface to the SHA1 Algorithm
 License:	GPL+ or Artistic
@@ -12,7 +12,6 @@ URL:		http://search.cpan.org/dist/%{upstream_name}/
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Digest/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Digest-SHA1 module for perl.
@@ -25,17 +24,12 @@ Digest-SHA1 module for perl.
 %make CFLAGS="%{optflags}"
 
 %check
-%make test
+make test
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc README Changes
 %{_mandir}/*/*
 %{perl_vendorarch}/Digest
@@ -65,15 +59,15 @@ rm -rf %{buildroot}
 + Revision: 564431
 - rebuild for perl 5.12.1
 
-* Tue Jul 20 2010 Jérôme Quelin <jquelin@mandriva.org> 2.130.0-2mdv2011.0
+* Tue Jul 20 2010 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 2.130.0-2mdv2011.0
 + Revision: 555247
 - rebuild
 
-* Wed Jul 14 2010 Jérôme Quelin <jquelin@mandriva.org> 2.130.0-1mdv2011.0
+* Wed Jul 14 2010 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 2.130.0-1mdv2011.0
 + Revision: 553126
 - update to 2.13
 
-* Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 2.120.0-1mdv2010.1
+* Sat Aug 01 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 2.120.0-1mdv2010.1
 + Revision: 406347
 - rebuild using %%perl_convert_version
 
@@ -121,10 +115,10 @@ rm -rf %{buildroot}
 * Tue Apr 13 2004 Rafael Garcia-Suarez <rgarciasuarez@mandrakesoft.com> 2.10-1mdk
 - 2.10.
 
-* Thu Aug 21 2003 Fran�ois Pons <fpons@mandrakesoft.com> 2.04-1mdk
+* Thu Aug 21 2003 François Pons <fpons@mandrakesoft.com> 2.04-1mdk
 - 2.04.
 
-* Wed Aug 13 2003 Per �yvind Karlsen <peroyvind@linux-mandrake.com> 2.02-3mdk
+* Wed Aug 13 2003 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 2.02-3mdk
 - rebuild for new perl
 - drop Prefix tag
 - don't use PREFIX
