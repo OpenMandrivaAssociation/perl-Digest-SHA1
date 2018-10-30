@@ -3,12 +3,12 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	20
+Release:	21
 
 Summary:	Perl interface to the SHA1 Algorithm
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{upstream_name}/
+URL:		http://metacpan.org/release/Digest-SHA1
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Digest/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(Test)
