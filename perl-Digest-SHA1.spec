@@ -1,5 +1,4 @@
 %define	upstream_name	 Digest-SHA1
-%define upstream_version 2.13
 
 %ifarch %{x86_64}
 # Workaround for debuginfo bug
@@ -7,14 +6,14 @@
 %endif
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	2.13
+Release:	1
 
 Summary:	Perl interface to the SHA1 Algorithm
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		http://metacpan.org/release/Digest-SHA1
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Digest/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/G/GA/GAAS/Digest-SHA1-%{version}.tar.gz
 
 BuildRequires:	perl(Test)
 BuildRequires:	perl-devel
@@ -23,7 +22,7 @@ BuildRequires:	perl-devel
 Digest-SHA1 module for perl.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%autosetup -p1 -n %{upstream_name}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -33,7 +32,7 @@ Digest-SHA1 module for perl.
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README Changes
