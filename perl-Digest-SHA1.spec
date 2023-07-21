@@ -1,9 +1,5 @@
 %define	upstream_name	 Digest-SHA1
-
-%ifarch %{x86_64}
-# Workaround for debuginfo bug
 %global _debugsource_template %{nil}
-%endif
 
 Name:		perl-%{upstream_name}
 Version:	2.13
