@@ -1,16 +1,14 @@
-%define	upstream_name	 Digest-SHA1
+%define upstream_name Digest-SHA1
 %global _debugsource_template %{nil}
 
 Name:		perl-%{upstream_name}
 Version:	2.13
-Release:	2
-
+Release:	3
 Summary:	Perl interface to the SHA1 Algorithm
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		http://metacpan.org/release/Digest-SHA1
 Source0:	https://cpan.metacpan.org/authors/id/G/GA/GAAS/Digest-SHA1-%{version}.tar.gz
-
 BuildRequires:	perl(Test)
 BuildRequires:	perl-devel
 
@@ -32,7 +30,6 @@ make test
 
 %files
 %doc README Changes
-%{_mandir}/*/*
+%doc %{_mandir}/*/*
 %{perl_vendorarch}/Digest
 %{perl_vendorarch}/auto
-
