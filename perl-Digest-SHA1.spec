@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	2.13
-Release:	3
+Release:	4
 Summary:	Perl interface to the SHA1 Algorithm
 License:	GPL+ or Artistic
 Group:		Development/Perl
