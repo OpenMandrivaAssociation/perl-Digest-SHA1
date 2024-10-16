@@ -7,7 +7,7 @@ Release:	4
 Summary:	Perl interface to the SHA1 Algorithm
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://metacpan.org/release/Digest-SHA1
+URL:		https://metacpan.org/release/Digest-SHA1
 Source0:	https://cpan.metacpan.org/authors/id/G/GA/GAAS/Digest-SHA1-%{version}.tar.gz
 BuildRequires:	perl(Test)
 BuildRequires:	perl-devel
