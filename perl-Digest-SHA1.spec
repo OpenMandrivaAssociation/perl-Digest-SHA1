@@ -1,5 +1,4 @@
 %define upstream_name Digest-SHA1
-%global _debugsource_template %{nil}
 
 Name:		perl-%{upstream_name}
 Version:	2.13
