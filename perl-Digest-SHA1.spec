@@ -8,6 +8,7 @@ License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		https://metacpan.org/release/Digest-SHA1
 Source0:	https://cpan.metacpan.org/authors/id/G/GA/GAAS/Digest-SHA1-%{version}.tar.gz
+BuildRequires:	make
 BuildRequires:	perl(Test)
 BuildRequires:	perl-devel
 
